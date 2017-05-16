@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.uncc.weatherapp.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="5dp"
+        android:id="@+id/weather_layout">
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/cityEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/weather_layout"
+        android:layout_marginTop="5dp"
+        android:ems="14"
+        android:hint="City Name (e.g. Charlotte)"
+        android:inputType="textPersonName"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/countryEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cityEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="2dp"
+        android:ems="14"
+        android:hint="Country Name (e.g. US)"
+        android:inputType="textPersonName"
+        android:textSize="14sp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/searchCityBtn"
+        android:id="@+id/savedCities"
+        android:layout_centerHorizontal="true"
+        android:text="Saved Cities"
+        />
+    <Button
+        android:id="@+id/searchCityBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/countryEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="Search City"
+        android:textAllCaps="false"
+        android:onClick="searchCity"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/savedCities"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp"
+        android:id="@+id/listVCity"/>
+
+</RelativeLayout>
